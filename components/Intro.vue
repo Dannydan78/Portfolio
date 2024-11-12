@@ -124,7 +124,7 @@ onMounted(() => {
 &
 .title{
     padding-top: 7rem;
-    z-index: 3000;
+    z-index: 1000;
  
 }
 
