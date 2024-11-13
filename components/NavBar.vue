@@ -74,5 +74,9 @@ nav {
     color: #ffffff;
     background-color: rgba(138, 43, 226, 0.6);
     transition: all 1s ease-out;
+    box-shadow:
+        0 4px 15px rgba(175, 2, 214, 0.6),
+        0 0 30px rgba(175, 2, 214, 0.6);
+  
 }
 </style>

@@ -6,8 +6,8 @@
       <div class="cards flex items-center justify-center px-14 ">
         <Cards />
       </div>
-      <div class="slide">
-        <PicturesSlide />
+      <div class="presentation">
+        <h1 class="titleContent font-bold">Title</h1>
       </div>
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
         <Presentation />
@@ -48,6 +48,14 @@
   
   .slide {
     padding-top: 11rem;
+  }
+  .presentation{
+    margin-top: 15rem;
+  }
+  .titleContent {
+    font-size: 2rem ;
+    text-align: center;
+    
   }
   </style>
   

@@ -20,7 +20,7 @@ let sizes = { width: 0, height: 0 };
 
 onMounted(() => {
   sizes.width = window.innerWidth;
-  sizes.height = 2000;
+  sizes.height = 1600;
   init();
 });
 
