@@ -1,10 +1,18 @@
 <template>
+  <div>
+    <h3 class="text-white stack ml-8">Maîtrise des technos</h3>
+    <div class="flex flex-col w-1/2">
+    <p class="mt-4 ml-8 text-white">
+      En backend, je maîtrise <span class="three font-bold">PHP</span> et le framework<span class="three font-bold"> Laravel</span>, pour la gestion de base de données, des API.
+      Pour le frontend, je suis compétent en JavaScript avec les frameworks <span class="three font-bold">Vue.js</span> et <span class="three font-bold">Nuxt.js</span>.
+          </p>
+        </div>
   <div class="staggering-grid">
-    <!-- Utilisation de v-for pour afficher les icônes -->
     <div v-for="(icon, index) in icons" :key="index" class="el">
       <img :src="icon.src" :alt="icon.alt" />
     </div>
   </div>
+</div>
 </template>
 
 
@@ -21,46 +29,27 @@ const icons = ref([
   { src: 'icons/Nuxt.svg', alt: 'icon5' },
 ]);
 
-// Fonction pour animer la grille
+
 function animateGrid() {
   anime({
     targets: '.staggering-grid .el',
-    // delay: anime.stagger(200, { grid: [14, 5], from: 'center' }),
-  translateX: 250,
+    delay: anime.stagger(100, { grid: [14, 5], from: 'center' }),
+  // translateX: 20,
+  // scale:1.09,
   autoplay: true,
-  easing: 'easeInOutSine'
+  easing: 'easeInOutSine',
+  direction: 'alternate',
+  // loop:true,
   });
 }
 
 // Fonction pour ajouter les effets de survol
-function addHoverEffect() {
-  const gridItems = document.querySelectorAll('.staggering-grid-demo .el');
 
-  gridItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-      anime({
-        targets: item,
-        scale: 1.2, // Zoom sur l'élément au survol
-        easing: 'easeInOutQuad',
-        duration: 300
-      });
-    });
-
-    item.addEventListener('mouseout', () => {
-      anime({
-        targets: item,
-        // scale: 1, // Retour à la taille d'origine
-        easing: 'easeInOutQuad',
-        duration: 300
-      });
-    });
-  });
-}
 
 // Appeler les fonctions une fois le composant monté
 onMounted(() => {
   animateGrid();
-  addHoverEffect();
+
 });
 </script>
 
@@ -87,4 +76,22 @@ onMounted(() => {
   /* object-fit: contain;  */
   /* transition: transform 0.3s ease-in-out; */
 }
+
+.stack {
+  font-size: 30px;
+  background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  
+}
+
+.three{
+
+background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
 </style>

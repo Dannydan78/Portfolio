@@ -9,8 +9,8 @@
                     <h2>{{ item.title }}</h2>
                 </a>
                 <p class="">{{ item.description }}</p>
-                <a href="" class="go inline-flex items-center pt-4">
-                    Go
+                <a :href="'#' + item.id" class="go inline-flex items-center pt-4">
+                    Let's go
                     <svg class="icon w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
@@ -27,7 +27,7 @@ import anime from 'animejs';
 const animationPlayed = ref(false);
 
 const cards = ref([
-    { title: "Présentation", description: "Développeur web passionné, j'aime relever des défis et créer des expériences numériques uniques.", link: "#", image: "images/ordinateur.avif" },
+    { title: "Présentation", description: "Développeur web passionné, j'aime relever des défis et créer des expériences numériques uniques.", link: "#", image: "images/ordinateur.avif", id:"presentation" },
     { title: "Expérience", description: "De Laravel à Vue.js, chaque projet a enrichi mon parcours de nouvelles compétences et humaines.", link: "#", image: "images/data.jpeg" },
     { title: "Passions", description: "L’animation, la 3D et le jeux vidéos sont au cœur de ma créativité, pour donner vie à mes idées et à des univers immersifs.", link: "#", image: "images/city.avif" }
 ]);

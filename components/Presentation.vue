@@ -1,40 +1,37 @@
 <template>
-  <div class="main mt-10 border rounded-md">
+  <div class="main mt-10 border rounded-md" id="presentation">
     <h2 class="ml-5 text-white font-bold">PRESENTATION</h2>
     <div class="line h-px ml-10 mr-10"></div>
     <div class="container text-white mt-8 rounded-md">
       <div class="content">
         <div class="flex flex-col ps-3 pt-2">
-          <p class="name">{{ props.Name }}</p>
-          <p class="name">{{ props.First_name }}</p>
-          <p>
-            Développeur web fullstack passion Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Magnam quibusdam rem a, eaque molestiae iusto adipisci non, deserunt dignissimos molestias quasi.
-            Labore, ut cum accusamus vitae minus impedit mollitia aut.
+          <p class="name">{{ props.Name }} {{ props.First_name }}</p>
+          <p class="mt-4 mb-4">
+          Développeur fullstack passionné par la programmation, l'animation 3D. Mon expérience dans le développement ainsi que ma passion pour l'animation m'a conduit sur <span class="three font-bold">Three.js</span>. Mon objectif est de combiner mon expertise en développement avec ma créativité afin des solutions innovantes et captivantes.
           </p>
-          <button @click="initBigRectangle" class="button">Click !</button>
+          <button @click="initBigRectangle" class="button">En savoir plus</button>
         </div>
-
-
         <div v-show="showAnimation" class="hero-figure-box-05">
           <img src="/images/lar.png" class="" alt="">
         </div>
       </div>
     </div>
-    <PicturesSlide />
+    <transition name="fade-slide">
+      <PicturesSlide v-if="showPicturesSlide" />
+    </transition>
   </div>
 </template>
 
 
 
 <script setup>
-import { defineProps, ref } from 'vue';
-import anime from 'animejs/lib/anime.es.js'; // Assurez-vous que l'importation d'animejs est correcte
+import { defineProps, ref, watch } from 'vue';
+import anime from 'animejs/lib/anime.es.js';
 
 const props = defineProps({
   Name: {
     type: String,
-    default: "Darragon-Konki"
+    default: "DARRAGON-KONKI"
   },
   First_name: {
     type: String,
@@ -47,13 +44,13 @@ const props = defineProps({
 });
 
 const showAnimation = ref(false);
+const showPicturesSlide = ref(false);
+const showMyStack = ref(false);
 
 const initBigRectangle = () => {
-  // Rendre l'élément visible en activant showAnimation
   showAnimation.value = true;
 
-  // Créez l'animation au moment du clic
-  bigDarkRectangle = anime.timeline({
+  anime.timeline({
     targets: '.hero-figure-box-05',
     duration: 400,
     easing: 'easeInOutExpo',
@@ -70,26 +67,45 @@ const initBigRectangle = () => {
       duration: 800,
       rotateY: '-360deg',
       rotateX: '8deg',
-
+    })
+    .add({
+      duration: 1,
+      complete: () => {
+        showMyStack.value = true;
+      }
     });
 };
+watch(showMyStack, (newValue) => {
+  if (newValue) {
+    showPicturesSlide.value = true;
+  }
+});
+
 </script>
 
 <style scoped>
+.main {
+  margin-left: 15rem;
+  margin-right: 15rem;
+  background-image: url('images/fade.jpg');
+  background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 1));
+  /* background-size: cover;  L'image couvre toute la zone de l'élément  */
+  background-position: center;
+  /* L'image est centrée */
+  background-repeat: no-repeat;
+}
+
 .hero-figure-box-05 {
   width: 200px;
-  /* ou toute autre taille nécessaire */
   height: 200px;
   /* taille en fonction de votre animation */
   /* background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px; */
   display: flex;
-  /* ou tout autre style que vous préférez */
   align-items: center;
   justify-content: center;
   transform-origin: center;
-  /* pour l'animation de rotation */
-  /* perspective: 500px; utile si vous souhaitez des effets 3D */
+  /* perspective: 500px; */
   transition: all 0.5s ease-in-out;
   /* transition pour les transformations */
 }
@@ -117,26 +133,13 @@ h2 {
 
 .content {
   display: grid;
-  /* Utilisation de la grille pour les colonnes */
   grid-template-columns: 1fr 1fr;
-  /* Deux colonnes égales */
   gap: 20px;
   /* Espacement entre les colonnes */
   padding: 1rem;
 
 }
 
-.main {
-  margin-left: 15rem;
-  margin-right: 15rem;
-  background-image: url('images/fade.jpg');
-  background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 1));
-  /* background-size: cover;  L'image couvre toute la zone de l'élément  */
-  background-position: center;
-  /* L'image est centrée */
-  background-repeat: no-repeat;
-
-}
 
 .button {
   padding: 10px 20px;
@@ -155,7 +158,6 @@ h2 {
   max-width: 200px;
   /* Limite la largeur maximale du bouton */
   margin: 0 auto;
-  /* Centre le bouton */
 }
 
 
@@ -183,4 +185,39 @@ h2 {
 img {
   border-radius: 10px;
 }
+
+.fade-title-enter-active,
+.fade-title-leave-active {
+  transition: all 2s ease-in-out;
+}
+
+.fade-title-enter-from {
+  opacity: 0;
+
+}
+
+.fade-title-enter-to {
+  opacity: 1;
+}
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 4s ease-in-out;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+
+}
+
+.fade-slide-enter-to {
+  opacity: 1;
+}
+.three{
+
+  background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 </style>

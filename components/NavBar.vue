@@ -20,7 +20,7 @@
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="" class="nav-link nav-link-text block py-2 px-3 text-white md:p-0">Présentation</a>
+                        <a href="#presentation" class="nav-link nav-link-text block py-2 px-3 text-white md:p-0">Présentation</a>
                     </li>
                     <li>
                         <a href="#" class="nav-link block py-2 px-3 text-white rounded md:p-0">Expérience</a>

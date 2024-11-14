@@ -3,6 +3,7 @@ import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
       'Cards': typeof import("../components/Cards.vue")['default']
+    'Experience': typeof import("../components/Experience.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
     'Intro': typeof import("../components/Intro.vue")['default']
     'NavBar': typeof import("../components/NavBar.vue")['default']
@@ -34,6 +35,7 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyCards': typeof import("../components/Cards.vue")['default']
+    'LazyExperience': typeof import("../components/Experience.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
     'LazyIntro': typeof import("../components/Intro.vue")['default']
     'LazyNavBar': typeof import("../components/NavBar.vue")['default']
@@ -71,6 +73,7 @@ declare module 'vue' {
 }
 
 export const Cards: typeof import("../components/Cards.vue")['default']
+export const Experience: typeof import("../components/Experience.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const Intro: typeof import("../components/Intro.vue")['default']
 export const NavBar: typeof import("../components/NavBar.vue")['default']
@@ -102,6 +105,7 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyCards: typeof import("../components/Cards.vue")['default']
+export const LazyExperience: typeof import("../components/Experience.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyIntro: typeof import("../components/Intro.vue")['default']
 export const LazyNavBar: typeof import("../components/NavBar.vue")['default']

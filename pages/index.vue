@@ -12,6 +12,10 @@
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
         <Presentation />
       </div>
+      <div class="presentation">
+        <h1 class="titleContent font-bold">Title</h1>
+      </div>
+      <Experience />
     </main>
   </template>
   
@@ -26,7 +30,7 @@
   
     AOS.init({
       duration: 1500, 
-      once: true, // Si `true`, l'animation ne se reproduira pas lors de nouveaux scrolls
+      once: true, // `true`, l'animation ne se reproduira pas lors de nouveaux scrolls
       offset: 100, // Décalage avant que l'élément soit visible
     });
   
@@ -50,11 +54,12 @@
     padding-top: 11rem;
   }
   .presentation{
-    margin-top: 15rem;
+    margin-top: 10rem;
   }
   .titleContent {
     font-size: 2rem ;
     text-align: center;
+    color: aliceblue;
     
   }
   </style>
