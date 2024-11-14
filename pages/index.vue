@@ -7,13 +7,17 @@
         <Cards />
       </div>
       <div class="presentation">
-        <h1 class="titleContent font-bold">Title</h1>
+        <p class="exp">Qui suis-je?</p>
+        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
+        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
         <Presentation />
       </div>
       <div class="presentation">
-        <h1 class="titleContent font-bold">Title</h1>
+        <p class="exp">EXP</p>
+        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
+        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Experience />
     </main>
@@ -61,6 +65,15 @@
     text-align: center;
     color: aliceblue;
     
+  }
+  p{
+    text-align: center;
+  }
+
+  .exp{
+    background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
   </style>
   

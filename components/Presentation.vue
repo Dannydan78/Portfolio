@@ -6,9 +6,10 @@
       <div class="content">
         <div class="flex flex-col ps-3 pt-2">
           <p class="name">{{ props.Name }} {{ props.First_name }}</p>
-          <p class="mt-4 mb-4">
-          Développeur fullstack passionné par la programmation, l'animation 3D. Mon expérience dans le développement ainsi que ma passion pour l'animation m'a conduit sur <span class="three font-bold">Three.js</span>. Mon objectif est de combiner mon expertise en développement avec ma créativité afin des solutions innovantes et captivantes.
-          </p>
+          <p class="mt-4">
+          Développeur fullstack passionné par la programmation, l'animation 3D.</p>  
+          <p>Mon objectif est de combiner mon expertise en développement avec ma créativité afin des solutions innovantes et captivantes.</p>
+          <p>Mon expérience dans le développement ainsi que ma passion pour l'animation m'a conduit sur <span class="three font-bold">Three.js</span>.</p>
           <button @click="initBigRectangle" class="button">En savoir plus</button>
         </div>
         <div v-show="showAnimation" class="hero-figure-box-05">

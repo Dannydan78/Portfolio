@@ -62,8 +62,10 @@
             <h1 class="wrapper mt-6">L'animation est un monde <span></span></h1>
             <h2 class="wrapper">Visible et imaginaire ils peuvent être qu'une simple illusion.</h2>
         </div>
-        <div class="flex flex-row w-1/2 ml-12">
-        <p class="text-white">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je m'efforce de créer des univers qui éveillent la curiosité. Ce portfolio illustre mon voyage créatif, mêlant ma personne, ma passion pour l'animation et mon goût pour les technologies immersives. Bienenue dans mon monde..."</p>
+        <div class="flex flex-col w-1/2  ml-12">
+        <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je m'efforce de créer des univers qui éveillent la curiosité. </p>
+        <p class="text-gray-400">Ce portfolio illustre mon voyage créatif, mêlant ma personne, ma passion pour l'animation et mon goût pour les technologies immersives.</p>
+        <p class="text-gray-400">Bienenue dans mon monde..."</p> 
     </div>
     </div>
 </template>
