@@ -136,7 +136,7 @@ function onMouseMove(event) {
 function onScroll() {
   // Mettre à jour la position de la caméra en fonction du scroll
   const scrollPercent = window.scrollY / (sizes.height - window.innerHeight);
-  camera.position.y = -(scrollPercent * 20); // Ajuster le facteur 20 selon vos besoins
+  camera.position.y = -(scrollPercent * 20); 
   camera.lookAt(0, camera.position.y, 0);
 }
 

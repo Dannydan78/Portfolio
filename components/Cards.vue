@@ -10,7 +10,7 @@
                 </a>
                 <p class="">{{ item.description }}</p>
                 <a :href="'#' + item.id" class="go inline-flex items-center pt-4">
-                    Let's go
+                
                     <svg class="icon w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
@@ -85,6 +85,9 @@ article h2 {
     font-size: 1.6rem;
     color: var(--title-color);
     transition: color 0.3s ease-out;
+    background: var(--title-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 figure {
@@ -128,14 +131,12 @@ article a .icon {
 
 article:has(:hover, :focus) {
     --img-scale: 1.1;
-    --title-color: #19f6e8;
+    --title-color: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
     --link-icon-translate: 0;
     --link-icon-opacity: 1;
-    background: rgba(138, 43, 226, 0.5);
     cursor: pointer;
-    transform: translateY(-15px);
-    /* border: 2px solid rgba(246, 25, 239, 0.5); */
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    transform: translateY(-10px);
+    /* background: rgba(138, 43, 226, 0.5); */
 }
 
 .cards-container {

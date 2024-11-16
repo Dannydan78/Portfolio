@@ -137,8 +137,9 @@ onMounted(() => {
 }
 
 h1 span {
-    color: #19f6e8;
+    color:  rgb(138, 43, 226, 1);
 }
+
 
 path {
     /* fill: transparent; */
