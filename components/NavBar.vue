@@ -56,7 +56,7 @@ nav {
 }
 
 .style {
-    background-image: linear-gradient(0deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.8));
+    background-image: linear-gradient(0deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.9));
     border: solid 1px rgb(123, 130, 193);
     top: 0;
     left: 0;

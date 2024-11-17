@@ -64,9 +64,7 @@
       </div>
     </div>
 
-    <transition name="fade-slide">
-      <PicturesSlide v-if="showPicturesSlide" />
-    </transition>
+   
   </div>
 </template>
 
@@ -120,6 +118,7 @@ const startAutoScroll = () => {
 
 onMounted(() => {
   startAutoScroll();
+  
 });
 </script>
 
