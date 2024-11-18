@@ -6,20 +6,27 @@
       <div class="cards flex items-center justify-center px-14 ">
         <Cards />
       </div>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
       <div class="presentation">
         <p class="exp">Qui suis-je?</p>
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
         <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
         <Presentation />
       </div>
+      <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" class="">
       <div class="presentation">
         <p class="exp">EXP</p>
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
         <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Experience />
+      </div>
+      <div class="presentation">
+        <p class="exp">Passion</p>
+        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
+        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
+      </div>
     </main>
   </template>
   

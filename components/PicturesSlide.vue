@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-white stack ml-8">Maîtrise des technos</h3>
+    <h3 class="stack ml-8 text-purple-300">Maîtrise des technos</h3>
     <div class="flex flex-col w-1/2">
     <p class="mt-4 ml-8 text-white">
       En backend, je maîtrise <span class="three font-bold">PHP</span> et le framework<span class="three font-bold"> Laravel</span>, pour la gestion de base de données, des API.
@@ -79,10 +79,10 @@ onMounted(() => {
 
 .stack {
   font-size: 30px;
-  background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+  /* background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  display: inline-block; */
   
 }
 

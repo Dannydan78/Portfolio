@@ -1,6 +1,6 @@
 <template>
     <div class="cards-container">
-        <article class="card" v-for="(item, index) in cards" :key="index" @mouseenter="animateCardText" @mouseleave="resetAnimation">
+        <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" @mouseenter="animateCardText" @mouseleave="resetAnimation">
             <figure>
                 <img :src="item.image" alt="Image" />
             </figure>
@@ -70,6 +70,7 @@ article {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     color: azure;
+ 
 }
 
 article a::after {
@@ -131,12 +132,13 @@ article a .icon {
 
 article:has(:hover, :focus) {
     --img-scale: 1.1;
-    --title-color: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
+    --title-color: rgb(216, 180, 254);
     --link-icon-translate: 0;
     --link-icon-opacity: 1;
     cursor: pointer;
     transform: translateY(-10px);
-    /* background: rgba(138, 43, 226, 0.5); */
+    background: rgba(138, 43, 226, 0.5);
+    /* border: 1px solid rgb(138, 43, 226, 1); */
 }
 
 .cards-container {

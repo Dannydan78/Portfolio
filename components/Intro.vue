@@ -60,7 +60,7 @@
     <div class="justify-center mt-12">
         <div class=" text-white pt-12">
             <h1 class="wrapper mt-6 font-bold">L'animation est un monde <span></span></h1>
-            <h2 class="wrapper font-bold">Visible et imaginaire ils peuvent être qu'une simple illusion.</h2>
+            <h2 class="wrapper font-bold">Visible et imaginaire cela peut être qu'une simple illusion.</h2>
         </div>
         <div class="flex flex-col ml-12 justify-center items-center">
         <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je m'efforce de créer des univers qui éveillent la curiosité. </p>

@@ -1,11 +1,11 @@
 <template>
-  <div class="main mt-10 border rounded-md" id="presentation">
+  <div class="main mt-10 border border-gray-500 rounded-md" id="presentation">
     <h2 class="ml-5 text-white font-bold">PRESENTATION</h2>
     <div class="line h-px ml-10 mr-10"></div>
     <div class="container text-white mt-8 rounded-md">
       <div class="content">
         <div class="flex flex-col ps-3 pt-2">
-          <p class="name">{{ props.Name }} {{ props.First_name }}</p>
+          <p class="name text-purple-300">{{ props.Name }} {{ props.First_name }}</p>
           <p class="mt-4">
           Développeur fullstack passionné par la programmation, l'animation 3D.</p>  
           <p>Mon objectif est de combiner mon expertise en développement avec ma créativité afin des solutions innovantes et captivantes.</p>
@@ -88,12 +88,7 @@ watch(showMyStack, (newValue) => {
 .main {
   margin-left: 15rem;
   margin-right: 15rem;
-  background-image: url('images/fade.jpg');
-  background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 1));
-  /* background-size: cover;  L'image couvre toute la zone de l'élément  */
-  background-position: center;
-  /* L'image est centrée */
-  background-repeat: no-repeat;
+  background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.6));
 }
 
 .hero-figure-box-05 {
@@ -178,9 +173,7 @@ h2 {
 
 .name {
   font-size: 30px;
-  background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 }
 
 img {
