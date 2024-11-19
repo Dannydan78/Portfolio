@@ -78,13 +78,13 @@ const initChart = () => {
                 value: 1548, 
                 name: 'Laravel',
                 itemStyle: {
-                  borderRadius: 10,
+                  borderRadius: 2,
                   // borderColor: '#fff',
                   borderWidth: 2
                 }
               },
               { value: 1450, name: 'Vue.js' },
-              { value: 510, name: 'MySql' },
+              { value: 510, name: 'Sql' },
               { value: 234, name: 'Docker' },
             ],
             emphasis: {
@@ -111,7 +111,7 @@ const initChart = () => {
               }
             },
             itemStyle: {
-              borderRadius: 10,
+              borderRadius: 2,
               // borderColor: '#fff',
               borderWidth: 2
             }

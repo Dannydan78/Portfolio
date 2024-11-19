@@ -27,6 +27,7 @@
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
         <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
+      <Passion />
     </main>
   </template>
   

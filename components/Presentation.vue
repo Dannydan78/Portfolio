@@ -115,7 +115,7 @@ watch(showMyStack, (newValue) => {
   flex-direction: column;
   margin-inline: auto;
   border-radius: 5px;
-  /* min-height: 400px; */
+  min-height: 300px;
   margin-bottom: 5rem;
 }
 

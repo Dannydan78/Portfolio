@@ -59,7 +59,7 @@ const startAutoScroll = () => {
 
   let scrollInterval;
   let isPaused = false;
-  let scrollDirection = 1; // 1 pour descendre, -1 pour monter
+  let scrollDirection = 1; 
 
   const handleMouseEnter = () => {
     isPaused = true;
@@ -108,8 +108,8 @@ onMounted(() => {
 
 <style scoped>
 .scroll-container {
-  max-height: 180px;
-  overflow-y: hidden; /* sera changé en 'auto' au survol */
+  max-height: 200px;
+  overflow-y: hidden; 
   position: relative;
   mask-image: linear-gradient(
     to bottom,
@@ -129,7 +129,7 @@ onMounted(() => {
 
 .scroll-content {
   padding: 20px 10px;
-  transition: transform 0.3s ease-in-out; /* Ajout d'une transition douce */
+  transition: transform 0.3s ease-in-out; 
 }
 
 .main {
