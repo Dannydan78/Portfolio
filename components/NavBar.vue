@@ -16,20 +16,25 @@
             <div :class="['w-full md:w-auto', isMenuOpen ? 'block' : 'hidden', 'md:block']">
                 <ul class="flex flex-col md:flex-row md:space-x-16 mt-4 md:mt-0">
                     <li class="home">
-                        <a href="" class="nav-link block py-2 px-3 rounded md:p-0 text-white"
-                            aria-current="page">Home</a>
+                        <a @click.prevent="scrollToSection('home')" href="#" 
+                           class="nav-link block py-2 px-3 rounded md:p-0 text-white cursor-pointer"
+                           aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#presentation" class="nav-link nav-link-text block py-2 px-3 text-white md:p-0">Présentation</a>
+                        <a @click.prevent="scrollToSection('presentation')" href="#" 
+                           class="nav-link nav-link-text block py-2 px-3 text-white md:p-0 cursor-pointer">Présentation</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link block py-2 px-3 text-white rounded md:p-0">Expérience</a>
+                        <a @click.prevent="scrollToSection('experience')" href="#" 
+                           class="nav-link block py-2 px-3 text-white rounded md:p-0 cursor-pointer">Expérience</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link block py-2 px-3 text-white rounded md:p-0">Passions</a>
+                        <a @click.prevent="scrollToSection('passions')" href="#" 
+                           class="nav-link block py-2 px-3 text-white rounded md:p-0 cursor-pointer">Passions</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link block py-2 px-3 text-white md:p-0">Contact</a>
+                        <a @click.prevent="scrollToSection('contact')" href="#" 
+                           class="nav-link block py-2 px-3 text-white md:p-0 cursor-pointer">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -45,6 +50,22 @@ const isMenuOpen = ref(false);
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
+
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        isMenuOpen.value = false;
+        
+        const navbarHeight = 80; 
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
 </script>
 
 <style scoped>
@@ -57,7 +78,7 @@ nav {
 
 .style {
     background-image: linear-gradient(0deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.9));
-    border: solid 0.5px rgb(123, 130, 193);
+    border-bottom: solid 0.5px rgb(123, 130, 193);
     top: 0;
     left: 0;
     right: 0;

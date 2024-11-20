@@ -1,5 +1,5 @@
 <template>
-  <div class="main mt-10 rounded-md" id="presentation">
+  <div class="main mt-10 rounded-md" id="experience">
     <div class="flex flex-row gap-4">
       <div class="card flex flex-col w-1/2 border border-gray-500 rounded-md">
         <h2 class="ml-5 text-white font-bold">EXPERIENCE</h2>

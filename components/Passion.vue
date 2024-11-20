@@ -1,52 +1,32 @@
 <template>
-    <div class="passion-container" ref="container" :style="{
+    <div class="passion-container" id="passions" ref="container" :style="{
         filter: `blur(${blurAmount}px)`,
         transform: `scale(${scale})`,
     }">
-        <div class="flex flex-row">
-            <div class="cards-container">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card': index === 1 }">
+        <div class="flex flex-row justify-center gap-4">
+            <div class="cards-column">
+                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index">
                     <figure>
                         <img :src="item.image" alt="Image" />
                     </figure>
                 </article>
             </div>
-            <div class="cards-container-2">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card-2': index === 1 }">
+            <div class="cards-column column-large">
+                <article class="card border border-gray-500" v-for="(item, index) in cards3D" :key="index">
                     <figure>
                         <img :src="item.image" alt="Image" />
                     </figure>
                 </article>
             </div>
-            <div class="cards-container">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card': index === 1 }">
+            <div class="cards-column">
+                <article class="card border border-gray-500" v-for="(item, index) in cardsGame" :key="index">
                     <figure>
                         <img :src="item.image" alt="Image" />
                     </figure>
                 </article>
-            </div>
-            <div class="cards-container-2">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card-2': index === 1 }">
-                    <figure>
-                        <img :src="item.image" alt="Image" />
-                    </figure>
-                </article>
-            </div>
-            <div class="cards-container">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card': index === 1 }">
-                    <figure>
-                        <img :src="item.image" alt="Image" />
-                    </figure>
-                </article>
-            </div>
-            <div class="cards-container-2">
-                <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" :class="{ 'middle-card-2': index === 1 }">
-                    <figure>
-                        <img :src="item.image" alt="Image" />
-                    </figure>
-                </article>
-            </div>
+            </div>     
         </div>
+        <div class="text-white mt-10 text-2xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet delectus, tempora similique laudantium aliquam itaque eum modi. Quisquam hic minus dicta necessitatibus voluptas accusantium quas, ipsam ex repellat laborum.</div>
     </div>
 </template>
 
@@ -90,8 +70,21 @@ onUnmounted(() => {
 const cards = ref([
     { image: "images/passions/rinnegan.png" },
     { image: "images/passions/naruto.jpg" },
-    { image: "images/passions/sasuke.jpg" }
+    { image: "images/passions/naruto2.jpg" },
+    { image: "images/passions/naruto.jpg" }
 ]);
+const cards3D = ref([
+    { image: "images/passions/Chicken.jpg" },
+    { image: "images/passions/game.png" },
+    { image: "images/passions/programmation.jpg" }
+]);
+const cardsGame = ref([
+    { image: "images/passions/Game.jpg" },
+    { image: "images/passions/manette.jpg" },
+    { image: "images/passions/boxe.jpg" },
+    { image: "images/passions/boxe.jpg" },
+]);
+
 
 </script>
 
@@ -101,7 +94,7 @@ const cards = ref([
     transition: all 0.3s ease-out;
     transform-origin: center;
     will-change: transform, filter; 
-    perspective: 1000px; /* Ajoute de la profondeur à l'animation */
+    perspective: 1000px; 
     margin-top: 6rem;
 
 }
@@ -131,62 +124,71 @@ figure {
 article img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform-origin: center;
-    transform: scale(var(--img-scale));
-    transition: transform 0.4s ease-in-out;
+    object-fit:cover;
 }
 
-.cards-container {
+.cards-column {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    padding-inline: 24px;
+    max-width: 280px;
     gap: 20px;
-    padding-left: 0;
-    margin: -10% auto;
-    padding: 10% 24px;
-}
-.cards-container-2 {
-    display: flex;
-    flex-direction: column;
-    max-width: 250px;
-    max-height: 20px;
-
-    gap: 20px;
-    padding-left: 0;
+    margin-top: 100px; /* Décalage vers le bas */
 }
 
-.middle-card {
-    min-height: 40px;
+.column-large {
+    max-width: 400px;
+    margin-top: ; /* Cette colonne commence plus haut */
 }
-.middle-card-2 {
+
+.column-large .card {
     min-height: 400px;
 }
 
-.middle-card figure {
-    height: 200px;
+.column-large figure {
+    height: 400px;
 }
 
-@media (max-width: 968px) {
-    .cards-container {
-        flex-direction: column;
+.card {
+    min-height: 300px;
+    width: 100%;
+    background: rgba(79, 80, 80, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width: 1200px) {
+    .flex-row {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
-    article, .middle-card {
-        width: 100%;
-        min-height: 40px;
+
+    .cards-column {
+        flex: 0 1 calc(50% - 2rem);
+        margin-top: 20px;
     }
-    
-  
 }
 
 @media (max-width: 768px) {
-    figure {
-        height: 250px;
+    .flex-row {
+        flex-direction: column;
+        align-items: center;
     }
-    .passion-container {
-        transform-origin: top center; /* Meilleur point d'origine sur mobile */
+
+    .cards-column {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .column-large {
+        max-width: 100%;
     }
 }
 </style>
