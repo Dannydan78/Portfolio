@@ -21,7 +21,7 @@
             <div class="cards-column">
                 <article class="card border border-gray-500" v-for="(item, index) in cardsGame" :key="index">
                     <figure>
-                        <img :src="item.image" alt="Image" />f
+                        <img :src="item.image" alt="Image" />
                     </figure>
                 </article>
             </div>     
