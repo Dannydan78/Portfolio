@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@dotlottie/player-component": "^2.7.12",
     "animejs": "^3.2.2",
     "aos": "^2.3.4",
     "echarts": "^5.5.1",

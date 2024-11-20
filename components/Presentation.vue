@@ -167,7 +167,6 @@ h2 {
 }
 
 .line {
-  /* background: #19f6e8; */
   background: white;
 }
 

@@ -28,6 +28,7 @@
         <p class="text-gray-400 text-justify pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Passion />
+      <Contact />
     </main>
   </template>
   
