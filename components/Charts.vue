@@ -45,7 +45,9 @@ const initChart = () => {
 
         tooltip: {
           trigger: 'item',
-          formatter: '{b} : {d}%',
+          formatter: function(params) {
+            return params.data.tooltipText;
+          },
           backgroundColor: 'rgba(0,0,0,0.7)',
           // borderColor: '#fff',
           borderWidth: 1,
@@ -77,15 +79,49 @@ const initChart = () => {
               { 
                 value: 1548, 
                 name: 'Laravel',
+                tooltipText: `
+                  <strong>Laravel</strong><br/>
+                  • Développement API REST<br/>
+                  • Gestion de base de données<br/>
+                  • Script pour transporter des données<br/>
+                  • Tests unitaires
+                `,
                 itemStyle: {
                   borderRadius: 2,
-                  // borderColor: '#fff',
                   borderWidth: 2
                 }
               },
-              { value: 1450, name: 'Vue.js' },
-              { value: 510, name: 'Sql' },
-              { value: 234, name: 'Docker' },
+              { 
+                value: 1450, 
+                name: 'Vue.js',
+                tooltipText: `
+                  <strong>Vue.js</strong><br/>
+                  • Composants réutilisables<br/>
+                  • State management<br/>
+                  • Interfaces réactives<br/>
+                  • Animations
+                `
+              },
+              { 
+                value: 510, 
+                name: 'Sql',
+                tooltipText: `
+                  <strong>SQL</strong><br/>
+                  • Requêtes complexes<br/>
+                  • Optimisation<br/>
+                  • Modélisation<br/>
+                `
+              },
+              { 
+                value: 234, 
+                name: 'Docker',
+                tooltipText: `
+                  <strong>Docker</strong><br/>
+                  • Conteneurisation<br/>
+                  • Docker-compose<br/>
+                  • Déploiement
+                `
+              },
             ],
             emphasis: {
               itemStyle: {
@@ -99,7 +135,7 @@ const initChart = () => {
             label: {
               show: true,
               color: '#fff',
-              formatter: '{b}\n{d}%',
+              formatter: '{b}',
               fontSize: 14
             },
             labelLine: {
@@ -112,7 +148,6 @@ const initChart = () => {
             },
             itemStyle: {
               borderRadius: 2,
-              // borderColor: '#fff',
               borderWidth: 2
             }
           }

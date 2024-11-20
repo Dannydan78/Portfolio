@@ -49,7 +49,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
-import * as echarts from 'echarts';
+
 
 const startAutoScroll = () => {
   const container = document.querySelector('.scroll-container');

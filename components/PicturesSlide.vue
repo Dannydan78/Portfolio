@@ -43,10 +43,6 @@ function animateGrid() {
   });
 }
 
-// Fonction pour ajouter les effets de survol
-
-
-// Appeler les fonctions une fois le composant monté
 onMounted(() => {
   animateGrid();
 
@@ -58,8 +54,8 @@ onMounted(() => {
 <style scoped>
 .staggering-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Nombre de colonnes, ajuste selon ton besoin */
-  /* gap: 20px; Espacement entre les éléments */
+  grid-template-columns: repeat(5, 1fr);
+  /* gap: 20px; */
   /* padding: 20px;       */
 }
 
@@ -71,7 +67,7 @@ onMounted(() => {
 }
 
 .staggering-grid img {
-  max-width: 80%; /* Réduit la taille des icônes */
+  max-width: 80%; /* Réduit la taille  */
   max-height: 50%;
   /* object-fit: contain;  */
   /* transition: transform 0.3s ease-in-out; */

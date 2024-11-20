@@ -1,6 +1,6 @@
 <template>
     <div class="cards-container">
-        <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index" @mouseenter="animateCardText" @mouseleave="resetAnimation">
+        <article class="card border border-gray-500" v-for="(item, index) in cards" :key="index">
             <figure>
                 <img :src="item.image" alt="Image" />
             </figure>
@@ -21,10 +21,7 @@
 </template>
 
 <script setup>
-// import { ref } from 'vue';
-import anime from 'animejs';
-
-const animationPlayed = ref(false);
+import { ref } from 'vue';
 
 const cards = ref([
     { title: "Présentation", description: "Développeur web passionné, j'aime relever des défis et créer des expériences numériques uniques.", link: "#", image: "images/ordinateur.avif", id:"presentation" },
@@ -32,26 +29,7 @@ const cards = ref([
     { title: "Passions", description: "L’animation, la 3D et le jeux vidéos sont au cœur de ma créativité, pour donner vie à mes idées et à des univers immersifs.", link: "#", image: "images/city.avif" }
 ]);
 
-const animateCardText = (event) => {
-    if (!animationPlayed.value) {
-        anime({
-            targets: event.currentTarget.querySelectorAll('.title'),
-            opacity: [0, 1],
-            translateY: [20, 0],
-            delay: anime.stagger(200),
-            scale: [0.5, 1],
-            duration: 800,
-            easing: 'easeOutQuad',
-            complete: () => {
-                animationPlayed.value = true;
-            },
-        });
-    }
-};
 
-const resetAnimation = () => {
-    animationPlayed.value = false;
-};
 </script>
 
 <style scoped>

@@ -22,10 +22,10 @@
       </div>
       <Experience />
       </div>
-      <div class="presentation">
+      <div class="presentation pt-8">
         <p class="exp">Passion</p>
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
-        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
+        <p class="text-gray-400 text-justify pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Passion />
     </main>
