@@ -33,9 +33,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+
 const container = ref(null);
 const blurAmount = ref(8); // Valeur initiale du blur
-const scale = ref(1.2); // Scale initial (120%)
+const scale = ref(1.2); 
 
 const handleScroll = () => {
     const element = container.value;
@@ -132,12 +133,12 @@ article img {
     flex-direction: column;
     max-width: 280px;
     gap: 20px;
-    margin-top: 100px; /* Décalage vers le bas */
+    margin-top: 100px; 
 }
 
 .column-large {
     max-width: 400px;
-    margin-top: ; /* Cette colonne commence plus haut */
+   
 }
 
 .column-large .card {

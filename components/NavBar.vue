@@ -18,7 +18,7 @@
                     <li class="home">
                         <a @click.prevent="scrollToSection('home')" href="#" 
                            class="nav-link block py-2 px-3 rounded md:p-0 text-white cursor-pointer"
-                           aria-current="page">Home</a>
+                           aria-current="page">Accueil</a>
                     </li>
                     <li>
                         <a @click.prevent="scrollToSection('presentation')" href="#" 

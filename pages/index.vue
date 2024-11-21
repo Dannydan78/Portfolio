@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="min-h-screen flex flex-col">
       <NavBar class="nav-sans-vai" />
       <Particules />
       <Intro />
@@ -23,21 +23,32 @@
       <Experience />
       </div>
       <div class="presentation pt-8">
-        <p class="exp">Passion</p>
+        <p class="exp">Passions</p>
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
         <p class="text-gray-400 text-justify pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Passion />
-      <Contact />
+      <div class="pt-16">
+      <Contact @identity="updateIdentity" />
+    </div>
+    <div class="flex-grow mt-16">
+      <Footer :identity="identityData" />
+    </div>
     </main>
   </template>
   
   <script setup>
-  import { onMounted } from "vue";
+  import { onMounted, ref } from "vue";
   import AOS from "aos";
   import "aos/dist/aos.css";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  const identityData = ref(null);
+  
+  const updateIdentity = (data) => {
+    identityData.value = data;
+  };
   
   onMounted(() => {
   
@@ -56,7 +67,9 @@
   
   main {
     font-family: "Red Hat Display", sans-serif;
-    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
   .cards {
@@ -81,8 +94,9 @@
 
   .exp{
     background: linear-gradient(20deg, rgb(175, 2, 214), #19f6e8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
   }
   </style>
   

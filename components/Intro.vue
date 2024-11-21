@@ -74,7 +74,6 @@
 import gsap from "gsap";
 import anime from "animejs";
 import TextPlugin from "gsap/TextPlugin";
-// import { onMounted } from "vue";
 import SplitType from "split-type";
 
 
@@ -93,7 +92,7 @@ onMounted(() => {
     // Text animation
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
-    const title = gsap.timeline({ repeat: 1111, repeatDelay: 1, yoyo: true });
+    const title = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
     title.to("h1 span", {
         duration: 4,
         text: " ou chaque détails et couleurs comptent!",
