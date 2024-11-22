@@ -26,7 +26,8 @@
                 </article>
             </div>     
         </div>
-        <div class="text-white mt-10 text-2xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eveniet delectus, tempora similique laudantium aliquam itaque eum modi. Quisquam hic minus dicta necessitatibus voluptas accusantium quas, ipsam ex repellat laborum.</div>
+        <h1 class="titleContent font-boldn text-white text-center pt-10">Title Lorem, ipsum dolor sit amet consectetur.</h1>
+        <p class="text-gray-400 pb-2 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
     </div>
 </template>
 

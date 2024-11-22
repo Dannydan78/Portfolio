@@ -2,27 +2,27 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="social-links">
-        <a href="https://github.com/DannyDarragon" target="_blank" class="social-link">
+        <a :href="identity.github" target="_blank" class="social-link">
           <i class="fab fa-github"></i>
         </a>
-        <a :href="`mailto:${props.identity.email}`" class="social-link">
+        <a :href="`mailto:${identity.email}`" class="social-link">
           <i class="fas fa-envelope"></i>
         </a>
-        <a :href="`https://linkedin.com/in/${props.identity.linkedin}`" target="_blank" class="social-link">
+        <a :href="identity.linkedin" target="_blank" class="social-link">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
 
       <div class="copyright">
-        <p>&copy; {{ new Date().getFullYear() }} {{ props.identity.first_name }} {{ props.identity.last_name }}. Tous droits réservés.</p>
+        <p>&copy; {{ new Date().getFullYear() }} {{ identity.first_name }} {{ identity.last_name }}. Tous droits réservés.</p>
       </div>
 
       <div class="quick-links">
-        <a href="#home">Accueil</a>
-        <a href="#about">Présentation</a>
-        <a href="#experience">Expérience</a>
-        <a href="#passions">Passions</a>
-        <a href="#contact">Contact</a>
+        <a @click.prevent="props.scrollToSection('accueil')" href="#">Accueil</a>
+        <a @click.prevent="props.scrollToSection('presentation')" href="#">Présentation</a>
+        <a @click.prevent="props.scrollToSection('experience')" href="#">Expérience</a>
+        <a @click.prevent="props.scrollToSection('passions')" href="#">Passions</a>
+        <a @click.prevent="props.scrollToSection('contact')" href="#">Contact</a>
       </div>
     </div>
   </footer>
@@ -31,10 +31,16 @@
 <script setup>
 const props = defineProps({
     identity: {
-      type: Object,
-      required: true
+        type: Object,
+        required: true
+    },
+    scrollToSection: {
+        type: Function,
+        required: true
     }
 });
+
+const { identity } = props;
 </script>
 <style scoped>
 .footer {
@@ -65,8 +71,7 @@ const props = defineProps({
 }
 
 .social-link:hover {
-  color: rgba(138, 43, 226, 1);
-  transform: translateY(-3px);
+
 }
 
 .copyright {
@@ -89,7 +94,7 @@ const props = defineProps({
 }
 
 .quick-links a::after {
-  content: '';
+
   position: absolute;
   width: 0;
   height: 2px;
@@ -101,6 +106,8 @@ const props = defineProps({
 
 .quick-links a:hover {
     color: rgba(138, 43, 226, 1);
+    transition: all 0.5s ease-out;
+
 }
 
 .quick-links a:hover::after {

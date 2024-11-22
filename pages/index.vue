@@ -1,10 +1,10 @@
 <template>
     <main class="min-h-screen flex flex-col">
-      <NavBar class="nav-sans-vai" />
+      <NavBar ref="navbarRef" class="nav-sans-vai" />
       <Particules />
       <Intro />
       <div class="cards flex items-center justify-center px-14 ">
-        <Cards />
+        <Cards :scrollToSection="navbarRef?.scrollToSection" />
       </div>
       <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
       <div class="presentation">
@@ -29,10 +29,13 @@
       </div>
       <Passion />
       <div class="pt-16">
-      <Contact @identity="updateIdentity" />
+        <Contact :identity="identityData" />
     </div>
-    <div class="flex-grow mt-16">
-      <Footer :identity="identityData" />
+    <div class="footer mt-10">
+      <Footer 
+        :identity="identityData" 
+        :scroll-to-section="navbarRef?.scrollToSection"
+      />
     </div>
     </main>
   </template>
@@ -44,11 +47,20 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   
-  const identityData = ref(null);
+  const identityData = ref({
+    last_name: "Darragon-Konki",
+    first_name: "Danny",
+    job: "Développeur web fullstack",
+    email: "danny.darragon.konki@gmail.com",
+    github: "https://github.com/Dannydan78",
+    linkedin: "",
+  })
   
   const updateIdentity = (data) => {
     identityData.value = data;
   };
+  
+  const navbarRef = ref(null);
   
   onMounted(() => {
   
@@ -58,7 +70,8 @@
       offset: 100, // Décalage avant que l'élément soit visible
     });
   
- 
+    // Vérifier que la fonction est disponible
+    console.log('Navbar scroll function:', navbarRef.value?.scrollToSection);
   });
   </script>
   
@@ -97,6 +110,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 20px;
+  }
+
+  .footer{
+    margin-top: 5rem;
   }
   </style>
   

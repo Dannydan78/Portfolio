@@ -1,5 +1,5 @@
 <template>
-    <div class="title flex items-center justify-center" id="home">
+    <div class="title flex items-center justify-center" id="accueil">
         <h1 class="text-white text-4xl ">Title</h1>
         <span class="ml-2 world text-4xl text-purple-500">
             DARRAGON-KONKI</span>
@@ -125,7 +125,7 @@ onMounted(() => {
 &
 .title{
     padding-top: 7rem;
-    z-index: 1000;
+    z-index: 10;
  
 }
 
