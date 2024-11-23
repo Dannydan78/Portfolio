@@ -67,7 +67,7 @@ article {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     color: azure;
- 
+    width: 100%;
 }
 
 article a::after {
@@ -93,10 +93,14 @@ figure {
     padding: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    width: 100%;
 }
 
 article img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform-origin: center;
     transform: scale(var(--img-scale));
     transition: transform 0.4s ease-in-out;
@@ -142,16 +146,49 @@ article:has(:hover, :focus) {
 .cards-container {
     display: grid;
     max-width: 1200px;
-    min-height: 480px;
     margin-inline: auto;
     padding-inline: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .go{
     color: #19f6e8;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        padding-inline: 16px;
+        gap: 16px;
+    }
+
+    article h2 {
+        font-size: 1.2rem;
+    }
+
+    .article-body {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards-container {
+        padding-inline: 12px;
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        max-width: 100%;
+    }
+
+    article h2 {
+        font-size: 1.1rem;
+    }
+
+    .article-body {
+        padding: 12px;
+    }
 }
 </style>

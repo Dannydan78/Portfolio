@@ -2,44 +2,43 @@
     <nav class="style navTest">
         <div class="max-w-screen-xl w-full mx-auto flex items-center justify-between p-4 relative">
             <!-- Hamburger Button -->
-            <button
-                @click="toggleMenu"
-                class="block md:hidden text-white focus:outline-none"
-                aria-label="Toggle navigation"
-            >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <button @click="toggleMenu" class="block lg:hidden text-white focus:outline-none"
+                aria-label="Toggle navigation">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
                 </svg>
             </button>
-            
+
             <!-- Menu mobile -->
-            <div :class="['w-full md:flex md:items-center md:justify-between', isMenuOpen ? 'block' : 'hidden', 'md:block']">
+            <div
+                :class="['w-full lg:flex lg:items-center lg:justify-between', isMenuOpen ? 'block' : 'hidden', 'lg:block']">
                 <!-- Navigation Link -->
-                <ul class="flex flex-col md:flex-row md:justify-center md:space-x-16 mt-4 md:mt-0">
-                    <li class="mb-2 md:mb-0">
-                        <a @click.prevent="scrollToSection('accueil')" href="#" 
-                           class="nav-link block py-2 px-3 text-white cursor-pointer"
-                           aria-current="page">Accueil</a>
+                <ul class="flex flex-col lg:flex-row lg:justify-center lg:space-x-16 mt-4 lg:mt-0 mx-auto">
+                    <li class="mb-2 lg:mb-0">
+                        <a @click.prevent="scrollToSection('accueil')" href="#"
+                            class="nav-link block py-2 px-3 text-white cursor-pointer" aria-current="page">Accueil</a>
                     </li>
-                    <li class="mb-2 md:mb-0">
-                        <a @click.prevent="scrollToSection('presentation')" href="#" 
-                           class="nav-link block py-2 px-3 text-white cursor-pointer">Présentation</a>
+                    <li class="mb-2 lg:mb-0">
+                        <a @click.prevent="scrollToSection('presentation')" href="#"
+                            class="nav-link block py-2 px-3 text-white cursor-pointer">Présentation</a>
                     </li>
-                    <li class="mb-2 md:mb-0">
-                        <a @click.prevent="scrollToSection('experience')" href="#" 
-                           class="nav-link block py-2 px-3 text-white cursor-pointer">Expérience</a>
+                    <li class="mb-2 lg:mb-0">
+                        <a @click.prevent="scrollToSection('experience')" href="#"
+                            class="nav-link block py-2 px-3 text-white cursor-pointer">Expérience</a>
                     </li>
-                    <li class="mb-2 md:mb-0">
-                        <a @click.prevent="scrollToSection('passions')" href="#" 
-                           class="nav-link block py-2 px-3 text-white cursor-pointer">Passions</a>
+                    <li class="mb-2 lg:mb-0">
+                        <a @click.prevent="scrollToSection('passions')" href="#"
+                            class="nav-link block py-2 px-3 text-white cursor-pointer">Passions</a>
                     </li>
-                    <li class="mb-2 md:mb-0">
-                        <a @click.prevent="scrollToSection('contact')" href="#" 
-                           class="nav-link block py-2 px-3 text-white cursor-pointer">Contact</a>
+                    <li class="mb-2 lg:mb-0">
+                        <a @click.prevent="scrollToSection('contact')" href="#"
+                            class="nav-link block py-2 px-3 text-white cursor-pointer">Contact</a>
                     </li>
                 </ul>
-                <div class="social-icons-container">
-                    <div class="flex justify-center space-x-6 mt-6 md:mt-0">
+                <div class="social-icons-container ml-auto hidden lg:block">
+                    <div class="flex justify-end space-x-6 mt-6 lg:mt-0">
                         <a href="https://github.com/Dannydan78" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
@@ -66,8 +65,8 @@ function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
         isMenuOpen.value = false;
-        
-        const navbarHeight = 80; 
+
+        const navbarHeight = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
 
@@ -126,13 +125,12 @@ nav {
     justify-content: center;
 }
 
-.social-link:hover {
-  
-}
+.social-link:hover {}
 
 .social-icons-container {
     @media (min-width: 768px) {
-        margin-left: auto; 
+        margin-left: 2rem;
+        min-width: 120px;
     }
 }
 
@@ -182,6 +180,7 @@ nav {
             opacity: 0;
             transform: translateY(-10px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -191,7 +190,7 @@ nav {
 
 /* Ajustements pour les grands écrans */
 @media (min-width: 769px) {
-    nav > div {
+    nav>div {
         padding: 1rem 2rem;
     }
 

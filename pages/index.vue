@@ -53,7 +53,7 @@
     job: "Développeur web fullstack",
     email: "danny.darragon.konki@gmail.com",
     github: "https://github.com/Dannydan78",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/danny-darragon-konki-98ab0226b/",
   })
   
   const updateIdentity = (data) => {
