@@ -146,6 +146,7 @@ article:has(:hover, :focus) {
 .cards-container {
     display: grid;
     max-width: 1200px;
+    min-height: 450px;
     margin-inline: auto;
     padding-inline: 24px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

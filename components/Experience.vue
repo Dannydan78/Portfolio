@@ -1,7 +1,7 @@
 <template>
   <div class="main mt-10 rounded-md" id="experience">
-    <div class="flex flex-row gap-4">
-      <div class="card flex flex-col w-1/2 border border-gray-500 rounded-md">
+    <div class="flex flex-col lg:flex-row gap-4">
+      <div class="card flex flex-col w-full lg:w-1/2 border border-gray-500 rounded-md">
         <h2 class="ml-5 text-white font-bold">EXPERIENCE</h2>
         <div class="line h-px ml-10 mr-10"></div>
         <div class="ml-8 text-gray-400 mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <!-- Deuxième card -->
-      <div class="card2 border border-gray-500 w-1/2 rounded-md">
+      <div class="card2 border border-gray-500 w-full lg:w-1/2 rounded-md">
         <Charts />
       </div>
     </div>
@@ -205,6 +205,47 @@ h2 {
 .job-title {
   color: #fff;
   font-weight: 500;
+}
+
+/* Ajout des media queries */
+@media screen and (max-width: 1280px) {
+    .main {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .scroll-container {
+        max-height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .scroll-container {
+        max-height: 160px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
 }
 
 </style>

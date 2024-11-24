@@ -2,11 +2,14 @@
   <div>
     <h3 class="stack ml-8 text-purple-300">Maîtrise des technos</h3>
     <div class="flex flex-col w-1/2">
-    <p class="mt-4 ml-8 text-white">
-      En backend, je maîtrise <span class="three font-bold">PHP</span> et le framework<span class="three font-bold"> Laravel</span>, pour la gestion de base de données, des API.
-      Pour le frontend, je suis compétent en JavaScript avec les frameworks <span class="three font-bold">Vue.js</span> et <span class="three font-bold">Nuxt.js</span>.
-          </p>
-        </div>
+      <p class="mt-4 ml-8 text-white">
+        En backend, je maîtrise <span class="three font-bold">PHP</span> et le framework<span class="three font-bold"> Laravel</span>, pour la gestion de base de données, des API.
+        Pour le frontend, je suis compétent en JavaScript avec les frameworks <span class="three font-bold">Vue.js</span> et <span class="three font-bold">Nuxt.js</span>.
+      </p>
+      <p class="mt-4 ml-8 text-white">
+        Mon expertise et ma passion pour le métier m'ont conduite sur <span class="three font-bold">Three.js</span> et c'est avec ce framework que j'ai créé ce portfolio. J'ai aussi utilisé <span class="three font-bold">GSAP</span> et <span class="three font-bold">Anime.js</span> pour les animations.
+      </p>
+    </div>
   <div class="staggering-grid">
     <div v-for="(icon, index) in icons" :key="index" class="el">
       <img :src="icon.src" :alt="icon.alt" />

@@ -1,6 +1,14 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
+      <div class="quick-links">
+        <a @click.prevent="props.scrollToSection('accueil')" href="#">Accueil</a>
+        <a @click.prevent="props.scrollToSection('presentation')" href="#">Présentation</a>
+        <a @click.prevent="props.scrollToSection('experience')" href="#">Expérience</a>
+        <a @click.prevent="props.scrollToSection('passions')" href="#">Passions</a>
+        <a @click.prevent="props.scrollToSection('contact')" href="#">Contact</a>
+      </div>
+
       <div class="social-links">
         <a :href="identity.github" target="_blank" class="social-link">
           <i class="fab fa-github"></i>
@@ -15,14 +23,6 @@
 
       <div class="copyright">
         <p>&copy; {{ new Date().getFullYear() }} {{ identity.first_name }} {{ identity.last_name }}. Tous droits réservés.</p>
-      </div>
-
-      <div class="quick-links">
-        <a @click.prevent="props.scrollToSection('accueil')" href="#">Accueil</a>
-        <a @click.prevent="props.scrollToSection('presentation')" href="#">Présentation</a>
-        <a @click.prevent="props.scrollToSection('experience')" href="#">Expérience</a>
-        <a @click.prevent="props.scrollToSection('passions')" href="#">Passions</a>
-        <a @click.prevent="props.scrollToSection('contact')" href="#">Contact</a>
       </div>
     </div>
   </footer>
@@ -114,7 +114,6 @@ const { identity } = props;
   width: 100%;
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .footer-content {
     flex-direction: row;
@@ -136,10 +135,21 @@ const { identity } = props;
 }
 
 @media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .quick-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    order: 2;
+  }
+
+  .social-links {
+    order: 1;
+  }
+
+  .copyright {
+    order: 3;
   }
 }
 </style>

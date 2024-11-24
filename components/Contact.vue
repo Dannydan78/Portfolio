@@ -243,7 +243,7 @@ onMounted(() => {
     }
 }
 
-/* Animation d'entrée pour chaque lien */
+
 .contact-link:nth-child(1) { animation: slideIn 0.5s ease forwards; }
 .contact-link:nth-child(2) { animation: slideIn 0.5s ease forwards 0.2s; }
 .contact-link:nth-child(3) { animation: slideIn 0.5s ease forwards 0.4s; }

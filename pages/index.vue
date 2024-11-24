@@ -6,20 +6,20 @@
       <div class="cards flex items-center justify-center px-14 ">
         <Cards :scrollToSection="navbarRef?.scrollToSection" />
       </div>
-      <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="">
+      <!-- <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=""> -->
       <div class="presentation">
         <p class="exp">Qui suis-je?</p>
-        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
-        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
-      </div>
+        <h1 class="titleContent font-bold">Un parcours, une vision, une passion</h1>
+        <p class="text-gray-400 text-justify">"Ce que tu fais ne détermine pas qui tu es, mais ce que tu cherches à devenir révèle ta véritable nature."</p>
+      <!-- </div> -->
         <Presentation />
       </div>
-      <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" class="">
+      <!-- <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" class=""> -->
       <div class="presentation">
         <p class="exp">EXP</p>
         <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
         <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
-      </div>
+      <!-- </div> -->
       <Experience />
       </div>
       <div class="presentation pt-8">
@@ -28,10 +28,12 @@
         <p class="text-gray-400 text-justify pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
       </div>
       <Passion />
+      <!-- <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=""> -->
       <div class="pt-16">
         <Contact :identity="identityData" />
     </div>
-    <div class="footer mt-10">
+    <!-- </div> -->
+    <div class="footer mt-6">
       <Footer 
         :identity="identityData" 
         :scroll-to-section="navbarRef?.scrollToSection"
@@ -44,8 +46,6 @@
   import { onMounted, ref } from "vue";
   import AOS from "aos";
   import "aos/dist/aos.css";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
   
   const identityData = ref({
     last_name: "Darragon-Konki",
