@@ -51,9 +51,10 @@ const { identity } = props;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 100%;
   min-height: 70px;
-  margin: 0 auto;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
