@@ -52,7 +52,7 @@ const { identity } = props;
 
 .footer-content {
   max-width: 1200px;
-  min-height: 100px;
+  min-height: 70px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;

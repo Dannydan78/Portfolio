@@ -59,11 +59,11 @@
     </div>
     <div class="justify-center mt-12">
         <div class=" text-white pt-12">
-            <h1 class="wrapper mt-6 font-bold">L'animation est un monde <span></span></h1>
+            <h1 class="wrapper mt-6 font-bold">L'animation est un monde <span class="animated-text"></span></h1>
             <h2 class="wrapper font-bold">Visible et imaginaire cela peut être qu'une simple illusion.</h2>
         </div>
         <div class="flex flex-col ml-12 justify-center items-center">
-        <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je m'efforce de créer des univers qui éveillent la curiosité. </p>
+        <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je cherche à créer des univers qui éveillent la curiosité. </p>
         <p class="text-gray-400">Ce portfolio illustre mon voyage créatif, mêlant ma personne, ma passion pour l'animation et mon goût pour les technologies immersives.</p>
         <p class="text-gray-400">Bienenue dans mon monde..."</p> 
     </div>
@@ -93,7 +93,7 @@ onMounted(() => {
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
     const title = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
-    title.to("h1 span", {
+    title.to("h1 .animated-text", {
         duration: 4,
         text: " ou chaque détails et couleurs comptent!",
     });

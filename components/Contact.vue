@@ -322,7 +322,7 @@ onMounted(() => {
         animation: moveBallHorizontal 3s ease-in-out infinite;
     }
 
-    @keyframes moveBallHorizontal {
+    /* @keyframes moveBallHorizontal {
         0%, 100% {
             left: 20%;
             transform: translateX(0);
@@ -331,6 +331,6 @@ onMounted(() => {
             left: 80%;
             transform: translateX(0);
         }
-    }
+    } */
 }
 </style>

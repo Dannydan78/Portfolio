@@ -9,11 +9,11 @@
           <p class="mt-4">
           Développeur fullstack passionné par la programmation, l'animation 3D, curieux et à la fois créatif mon objectif est de créer des expériences qui vont au delà de la simple fonctionnalité.</p>  
           <p>Pour moi, la programmation est un jeu où seules l'imagination et la créativité fixent les limites.</p>
-          <p>Chaque défi résolu en cache un autre il y a toujours de nouvelles portes qui s'ouvrent, même quand on pense être arrivé a la fin du niveau."</p>
+          <p>Chaque défi résolu en cache un autre il y a toujours de nouvelles portes qui s'ouvrent, même quand on pense être arrivé a la fin."</p>
           <button @click="initBigRectangle" class="button">En savoir plus</button>
         </div>
         <div v-show="showAnimation" class="hero-figure-box-05">
-          <img src="/images/lar.png" class="" alt="">
+          <img src="/images/photo-danny.jpg" class="" alt="">
         </div>
       </div>
     </div>

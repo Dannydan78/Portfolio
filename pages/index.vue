@@ -17,15 +17,15 @@
       <!-- <div data-aos="fade-right" data-aos-anchor-placement="top-bottom" class=""> -->
       <div class="presentation">
         <p class="exp">EXP</p>
-        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
-        <p class="text-gray-400 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
+        <h1 class="titleContent font-bold">Experiences professionnelles</h1>
+        <p class="text-gray-400 text-justify">"Ce n'est pas l'expérience qui définit la valeur, mais la capacité à apprendre et à évoluer."</p>
       <!-- </div> -->
       <Experience />
       </div>
       <div class="presentation pt-8">
         <p class="exp">Passions</p>
-        <h1 class="titleContent font-bold">Title Lorem, ipsum dolor sit amet consectetur.</h1>
-        <p class="text-gray-400 text-justify pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo obcaecati fugiat libero tempora quo? Corrupti</p>
+        <h1 class="titleContent font-bold">L'art et la créativité comme source d'inspiration</h1>
+        <p class="text-gray-400 text-justify ">"La créativité est le reflet de ce qui nous anime intérieurement et celle-ci est nourrie par ce que nous regardons."</p>
       </div>
       <Passion />
       <!-- <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class=""> -->
@@ -93,7 +93,7 @@
     padding-top: 11rem;
   }
   .presentation{
-    margin-top: 10rem;
+    margin-top: 8rem;
   }
   .titleContent {
     font-size: 2rem ;
