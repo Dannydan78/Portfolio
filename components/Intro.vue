@@ -1,8 +1,19 @@
 <template>
-    <div class="title flex items-center justify-center" id="accueil">
-        <h1 class="text-white text-4xl ">Title</h1>
-        <span class="ml-2 world text-4xl text-purple-500">
-            DARRAGON-KONKI</span>
+    <div class="title flex flex-col items-center justify-center gap-3" id="accueil">
+        <h1 class="Danny text-white text-5xl font-bold tracking-wider">
+            <span class="inline-block w-2 h-2 bg-purple-500 rounded-full ml-2"></span>
+            DARRAGON-KONKI
+            <span class="inline-block w-2 h-2 bg-purple-500 rounded-full"></span>
+        </h1>
+        <div class="flex flex-col items-center">
+            <span class="Danny text-purple-400 font-bold tracking-[0.1em] uppercase relative">
+                Danny
+                <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-12 h-[1px] bg-purple-500"></span>
+            </span>
+            <span class="text-1xl text-gray-400  tracking-[0.1em] uppercase mt-4">
+                Développeur Web Fullstack
+            </span>
+        </div>
     </div>
     <div class="relative selection:text-white  mt-6">
         <div class="line-drawing-demo flex items-center justify-center content-center pl-12">
@@ -139,7 +150,16 @@ h1 span {
     color:  rgb(138, 43, 226, 1);
 }
 
-
+.Danny{    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #fff, rgba(138, 43, 226, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  
+}
 path {
     /* fill: transparent; */
     stroke: #19f6e8;
@@ -161,5 +181,16 @@ path {
         1px -1px 0 #dc19f6, */
         /* -1px -1px 0 rgb(138, 43, 226, 1); */
     font-size: 30px;
+}
+
+/* Animation subtile du point */
+.title h1 span {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 </style>

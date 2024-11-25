@@ -91,6 +91,7 @@ onMounted(() => {
 
 .last-name {
     font-size: 3rem;
+    font-weight: bold;
     background: linear-gradient(to right, #fff, rgba(138, 43, 226, 0.8));
     -webkit-background-clip: text;
     background-clip: text;
@@ -101,6 +102,7 @@ onMounted(() => {
 
 .first-name {
     font-size: 2.5rem;
+    font-weight: bold;
     /* color: rgba(138, 43, 226, 0.8); */
     color:#fff;
     letter-spacing: 1px;
@@ -267,6 +269,7 @@ onMounted(() => {
 
     .last-name {
         font-size: 2.5rem;
+        
     }
 
     .first-name {
