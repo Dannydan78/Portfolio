@@ -2,14 +2,24 @@
     <div class="contact-section" id="contact">
 
         <div class="header-container">
-            <h2 class="name">
-                <span class="last-name">{{ identity.last_name }}</span>
-                <span class="first-name">{{ identity.first_name }}</span>
+    <div class="flex flex-col items-center gap-3">
+        <div class="flex items-center gap-3">
+           
+            <h2 class="text-4xl font-light">
+                <span class="text-white tracking-[0.1em]">{{ identity.first_name }}</span>
             </h2>
-          
-        </div>
-
         
+        </div>
+        <span class="text-lg text-gray-400 tracking-[0.5em] uppercase">{{ identity.last_name }}</span>
+        <div class="flex items-center gap-2 mt-1">
+            <span class="h-[1px] w-12 bg-gradient-to-r from-transparent to-purple-500"></span>
+            <span class="text-sm tracking-[0.1em] text-purple-400">Développeur Web Fullstack</span>
+            <span class="h-[1px] w-12 bg-gradient-to-l from-transparent to-purple-500"></span>
+        </div>
+    </div>
+</div>
+
+
         <div class="contact-container border border-gray-400">
             <h2 class="section-title">CONTACTEZ-MOI</h2>
             <div class="title-underline"></div>
@@ -20,19 +30,15 @@
                     <client-only>
                         <dotlottie-player
                             src="https://lottie.host/9bba1f7a-a258-4013-bd59-00390621202b/jyI5xNK6ed.lottie"
-                            background="transparent" 
-                            speed="1" 
-                            class="lottie-player" 
-                            loop
-                            autoplay>
+                            background="transparent" speed="1" class="lottie-player" loop autoplay>
                         </dotlottie-player>
                     </client-only>
                 </div>
 
-        
+
                 <div class="vertical-divider"></div>
 
-               
+
                 <div class="contact-links">
                     <a :href="`mailto:${identity.email}`" class="contact-link">
                         <i class="fas fa-envelope"></i>
@@ -104,7 +110,7 @@ onMounted(() => {
     font-size: 2.5rem;
     font-weight: bold;
     /* color: rgba(138, 43, 226, 0.8); */
-    color:#fff;
+    color: #fff;
     letter-spacing: 1px;
 }
 
@@ -119,7 +125,7 @@ onMounted(() => {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
-    
+
 }
 
 .section-title {
@@ -185,14 +191,14 @@ onMounted(() => {
     }
 
     span {
-  
+
         letter-spacing: 0.5px;
     }
 
     &:hover {
         background: rgba(138, 43, 226, 0.2);
         transform: translateX(10px);
-        box-shadow: 
+        box-shadow:
             0 4px 15px rgba(138, 43, 226, 0.3),
             0 0 30px rgba(25, 246, 232, 0.2);
 
@@ -206,14 +212,12 @@ onMounted(() => {
 .vertical-divider {
     width: 3px;
     height: 250px;
-    background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgba(138, 43, 226, 1) 20%,
-        #19f6e8 50%,
-        rgba(138, 43, 226, 1) 80%,
-        transparent 100%
-    );
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(138, 43, 226, 1) 20%,
+            #19f6e8 50%,
+            rgba(138, 43, 226, 1) 80%,
+            transparent 100%);
     position: relative;
     margin: 0 2rem;
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
@@ -234,27 +238,39 @@ onMounted(() => {
 }
 
 @keyframes glowingDivider {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
         box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
     }
+
     50% {
         opacity: 1;
         box-shadow: 0 0 20px rgba(138, 43, 226, 0.8),
-                    0 0 30px rgba(25, 246, 232, 0.4);
+            0 0 30px rgba(25, 246, 232, 0.4);
     }
 }
 
 
-.contact-link:nth-child(1) { animation: slideIn 0.5s ease forwards; }
-.contact-link:nth-child(2) { animation: slideIn 0.5s ease forwards 0.2s; }
-.contact-link:nth-child(3) { animation: slideIn 0.5s ease forwards 0.4s; }
+.contact-link:nth-child(1) {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.contact-link:nth-child(2) {
+    animation: slideIn 0.5s ease forwards 0.2s;
+}
+
+.contact-link:nth-child(3) {
+    animation: slideIn 0.5s ease forwards 0.4s;
+}
 
 @keyframes slideIn {
     from {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -269,7 +285,7 @@ onMounted(() => {
 
     .last-name {
         font-size: 2.5rem;
-        
+
     }
 
     .first-name {
@@ -293,14 +309,12 @@ onMounted(() => {
         width: 80%;
         height: 3px;
         margin: 2rem 0;
-        background: linear-gradient(
-            to right,
-            transparent 0%,
-            rgba(138, 43, 226, 1) 20%,
-            #19f6e8 50%,
-            rgba(138, 43, 226, 1) 80%,
-            transparent 100%
-        );
+        background: linear-gradient(to right,
+                transparent 0%,
+                rgba(138, 43, 226, 1) 20%,
+                #19f6e8 50%,
+                rgba(138, 43, 226, 1) 80%,
+                transparent 100%);
     }
 
     .contact-links {

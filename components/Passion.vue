@@ -26,11 +26,61 @@
                 </article>
             </div>     
         </div>
+        <div class="anime-scroll-container mt-16 overflow-hidden bg-opacity-10 bg-purple-500">
+            <div class="anime-scroll flex gap-8 animate-scroll whitespace-nowrap py-4">
+                <div class="flex gap-8 animate-scroll items-center">
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Naruto</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Bleach</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Attack on Titan</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Jujutsu Kaisen</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Black Clover</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Dragon Ball Z</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">My Hero Academia</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">One Punch Man</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Eighty-Six</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Hunter x Hunter</span>
+                </div>
+                <div class="flex gap-8 animate-scroll items-center">
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Naruto</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Bleach</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Attack on Titan</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Jujutsu Kaisen</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Black Clover</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Dragon Ball Z</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">My Hero Academia</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">One Punch Man</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Eighty-Six</span>
+                    <span class="text-purple-500">•</span>
+                    <span class="text-gray-400">Hunter x Hunter</span>
+                    <span class="text-purple-500">•</span>
+                </div>
+            </div>
+        </div>
         <div class="passion-outro text-center pt-10">
     <h1 class="titleContent font-bold text-white mb-4">
         <span class="text-purple-500">&lt;</span> 
         DÉVELOPPEUR LE JOUR 
         <span class="text-purple-500">/&gt;</span>
+        <div>&</div>
     </h1>
     
     <div class="passion-list text-gray-400 flex flex-wrap justify-center gap-3 px-4">
@@ -111,7 +161,7 @@ const cards3D = ref([
     { image: "images/passions/programmation.jpg" }
 ]);
 const cardsGame = ref([
-    { image: "images/passions/Game.jpg" },
+    { image: "images/passions/game.jpg" },
     { image: "images/passions/manette.jpg" },
     { image: "images/passions/boxe.jpg" },
     { image: "images/townAI.jpg" },
@@ -234,5 +284,65 @@ figure {
     .column-large {
         max-width: 100%;
     }
+}
+
+.anime-scroll-container {
+    position: relative;
+    width: 100%;
+    
+}
+
+.anime-scroll {
+    display: flex;
+    animation: scroll 40s linear infinite;
+}
+
+.anime-scroll span {
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+.anime-scroll span:not(.text-purple-500):hover {
+    color: white;
+    transform: scale(1.1);
+    cursor: default;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.anime-scroll-container::before,
+.anime-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    z-index: 2;
+}
+
+.anime-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, 
+        rgb(0, 0, 0) 20%,
+        rgba(0, 0, 0, 0.9) 40%,
+        transparent
+    );
+}
+
+.anime-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, 
+    rgb(0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.9) 40%,
+        transparent
+    );
 }
 </style>
