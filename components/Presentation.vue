@@ -1,19 +1,19 @@
 <template>
   <div class="main mt-10 border border-gray-500 rounded-md" id="presentation">
-    <h2 class="ml-5 text-white font-bold">PRESENTATION</h2>
+    <h2 class="ml-5 text-white font-bold mt-5">PRESENTATION</h2>
     <div class="line h-px ml-10 mr-10"></div>
     <div class="container text-white mt-8 rounded-md">
       <div class="content">
         <div class="flex flex-col ps-3 pt-2">
           <p class="name text-purple-300">{{ props.Name }} {{ props.First_name }}</p>
           <p class="mt-4">
-          Développeur fullstack passionné par la programmation, l'animation 3D.</p>  
-          <p>Mon objectif est de combiner mon expertise en développement avec ma créativité afin des solutions innovantes et captivantes.</p>
-          <p>Mon expérience dans le développement ainsi que ma passion pour l'animation m'a conduit sur <span class="three font-bold">Three.js</span>.</p>
+          Développeur fullstack passionné par la programmation, l'animation 3D, curieux et à la fois créatif mon objectif est de créer des expériences qui vont au delà de la simple fonctionnalité.</p>  
+          <p>Pour moi, la programmation est un jeu où seules l'imagination et la créativité fixent les limites.</p>
+          <p>Chaque défi résolu en cache un autre il y a toujours de nouvelles portes qui s'ouvrent, même quand on pense être arrivé a la fin."</p>
           <button @click="initBigRectangle" class="button">En savoir plus</button>
         </div>
         <div v-show="showAnimation" class="hero-figure-box-05">
-          <img src="/images/lar.png" class="" alt="">
+          <img src="/images/photo-danny.jpg" class="" alt="">
         </div>
       </div>
     </div>
@@ -86,37 +86,25 @@ watch(showMyStack, (newValue) => {
 
 <style scoped>
 .main {
-  margin-left: 15rem;
-  margin-right: 15rem;
-  background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.6));
-}
-
-.hero-figure-box-05 {
-  width: 200px;
-  height: 200px;
-  /* taille en fonction de votre animation */
-  /* background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center;
-  /* perspective: 500px; */
-  transition: all 0.5s ease-in-out;
-  /* transition pour les transformations */
-}
-.svg {
-  justify-content: center;
-  align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-image: linear-gradient(100deg, rgb(9, 14, 2), rgba(138, 43, 226, 0.6));
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  margin-inline: auto;
-  border-radius: 5px;
-  min-height: 300px;
-  margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    border-radius: 5px;
+    min-height: 300px;
+    margin-bottom: 3rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 1rem;
 }
 
 h2 {
@@ -124,38 +112,29 @@ h2 {
   margin-left: 2rem;
   font-size: 1.6rem;
   margin-top: 2rem;
-  /* color: var(--title-color); */
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  /* Espacement entre les colonnes */
-  padding: 1rem;
-
+.name {
+    font-size: 24px;
 }
-
 
 .button {
-  padding: 10px 20px;
-  margin-top: 8rem;
-  font-size: 16px;
-  background-color: rgba(138, 43, 226, 0.7);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  box-shadow:
-    0 4px 15px rgba(175, 2, 214, 0.6),
-    0 0 30px rgba(175, 2, 214, 0.6);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  width: auto;
-  /* Ajuste la largeur du bouton */
-  max-width: 200px;
-  /* Limite la largeur maximale du bouton */
-  margin: 0 auto;
-}
+    padding: 10px 20px;
+    margin-left: 2rem;
+    margin-top: 1rem;
 
+    font-size: 16px;
+    background-color: rgba(138, 43, 226, 0.7);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow:
+        0 4px 15px rgba(175, 2, 214, 0.6),
+        0 0 30px rgba(175, 2, 214, 0.6);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: auto;
+    max-width: 200px;
+}
 
 .button:hover {
   transition: all 0.5s ease-out;
@@ -163,21 +142,92 @@ h2 {
     0 4px 20px rgba(184, 5, 204, 0.4),
     0 0 40px rgba(85, 2, 227, 0.6),
     0 0 60px rgba(10, 130, 191, 0.7);
+}
 
+.hero-figure-box-05 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-figure-box-05 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .main {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+
+    .content {
+        gap: 40px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .button {
+        margin-top: 6rem;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    .main {
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .main {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .button {
+        margin-top: 1rem;
+    }
+
+    .hero-figure-box-05 img {
+        max-width: 250px;
+    }
+}
+
+.svg {
+  justify-content: center;
+  align-items: center;
 }
 
 .line {
-  /* background: #19f6e8; */
   background: white;
-}
-
-.name {
-  font-size: 30px;
-
-}
-
-img {
-  border-radius: 10px;
 }
 
 .fade-title-enter-active,
@@ -212,6 +262,4 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
 </style>

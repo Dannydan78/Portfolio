@@ -5,12 +5,11 @@
                 <img :src="item.image" alt="Image" />
             </figure>
             <div class="article-body">
-                <a href="">
+                <a @click.prevent="props.scrollToSection(item.id)">
                     <h2>{{ item.title }}</h2>
                 </a>
                 <p class="">{{ item.description }}</p>
-                <a :href="'#' + item.id" class="go inline-flex items-center pt-4">
-                
+                <a @click.prevent="props.scrollToSection(item.id)" class="go inline-flex items-center pt-4">
                     <svg class="icon w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                     </svg>
@@ -23,13 +22,33 @@
 <script setup>
 import { ref } from 'vue';
 
+const props = defineProps({
+    scrollToSection: {
+        type: Function,
+        required: true
+    }
+});
+
 const cards = ref([
-    { title: "Présentation", description: "Développeur web passionné, j'aime relever des défis et créer des expériences numériques uniques.", link: "#", image: "images/ordinateur.avif", id:"presentation" },
-    { title: "Expérience", description: "De Laravel à Vue.js, chaque projet a enrichi mon parcours de nouvelles compétences et humaines.", link: "#", image: "images/data.jpeg" },
-    { title: "Passions", description: "L’animation, la 3D et le jeux vidéos sont au cœur de ma créativité, pour donner vie à mes idées et à des univers immersifs.", link: "#", image: "images/city.avif" }
+    { 
+        title: "Présentation", 
+        description: "Développeur web passionné, j'aime relever des défis et créer des expériences numériques uniques.", 
+        image: "images/ordinateur.avif", 
+        id: "presentation" 
+    },
+    { 
+        title: "Expérience", 
+        description: "De Laravel à Vue.js, chaque projet a enrichi mon parcours de nouvelles compétences et humaines.", 
+        image: "images/data.jpeg", 
+        id: "experience"
+    },
+    { 
+        title: "Passions", 
+        description: "L'animation, la 3D et le jeux vidéos sont au cœur de ma créativité, pour donner vie à mes idées et à des univers immersifs.", 
+        image: "images/city.avif", 
+        id: "passions"
+    }
 ]);
-
-
 </script>
 
 <style scoped>
@@ -48,7 +67,7 @@ article {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     color: azure;
- 
+    width: 100%;
 }
 
 article a::after {
@@ -74,10 +93,14 @@ figure {
     padding: 0;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    width: 100%;
 }
 
 article img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transform-origin: center;
     transform: scale(var(--img-scale));
     transition: transform 0.4s ease-in-out;
@@ -92,6 +115,7 @@ article a {
     align-items: center;
     text-decoration: none;
     color: #28666e;
+    cursor: pointer;
 }
 
 article a:focus {
@@ -122,15 +146,50 @@ article:has(:hover, :focus) {
 .cards-container {
     display: grid;
     max-width: 1200px;
-    min-height: 480px;
+    min-height: 450px;
     margin-inline: auto;
     padding-inline: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .go{
     color: #19f6e8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        padding-inline: 16px;
+        gap: 16px;
+    }
+
+    article h2 {
+        font-size: 1.2rem;
+    }
+
+    .article-body {
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards-container {
+        padding-inline: 12px;
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        max-width: 100%;
+    }
+
+    article h2 {
+        font-size: 1.1rem;
+    }
+
+    .article-body {
+        padding: 12px;
+    }
 }
 </style>

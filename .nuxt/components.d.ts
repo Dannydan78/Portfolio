@@ -4,7 +4,9 @@ type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refre
 interface _GlobalComponents {
       'Cards': typeof import("../components/Cards.vue")['default']
     'Charts': typeof import("../components/Charts.vue")['default']
+    'Contact': typeof import("../components/Contact.vue")['default']
     'Experience': typeof import("../components/Experience.vue")['default']
+    'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
     'Intro': typeof import("../components/Intro.vue")['default']
     'NavBar': typeof import("../components/NavBar.vue")['default']
@@ -38,7 +40,9 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyCards': typeof import("../components/Cards.vue")['default']
     'LazyCharts': typeof import("../components/Charts.vue")['default']
+    'LazyContact': typeof import("../components/Contact.vue")['default']
     'LazyExperience': typeof import("../components/Experience.vue")['default']
+    'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyHeader': typeof import("../components/Header.vue")['default']
     'LazyIntro': typeof import("../components/Intro.vue")['default']
     'LazyNavBar': typeof import("../components/NavBar.vue")['default']
@@ -78,7 +82,9 @@ declare module 'vue' {
 
 export const Cards: typeof import("../components/Cards.vue")['default']
 export const Charts: typeof import("../components/Charts.vue")['default']
+export const Contact: typeof import("../components/Contact.vue")['default']
 export const Experience: typeof import("../components/Experience.vue")['default']
+export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const Intro: typeof import("../components/Intro.vue")['default']
 export const NavBar: typeof import("../components/NavBar.vue")['default']
@@ -112,7 +118,9 @@ export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyCards: typeof import("../components/Cards.vue")['default']
 export const LazyCharts: typeof import("../components/Charts.vue")['default']
+export const LazyContact: typeof import("../components/Contact.vue")['default']
 export const LazyExperience: typeof import("../components/Experience.vue")['default']
+export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyIntro: typeof import("../components/Intro.vue")['default']
 export const LazyNavBar: typeof import("../components/NavBar.vue")['default']

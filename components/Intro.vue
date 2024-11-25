@@ -1,5 +1,5 @@
 <template>
-    <div class="title flex items-center justify-center" id="home">
+    <div class="title flex items-center justify-center" id="accueil">
         <h1 class="text-white text-4xl ">Title</h1>
         <span class="ml-2 world text-4xl text-purple-500">
             DARRAGON-KONKI</span>
@@ -59,11 +59,11 @@
     </div>
     <div class="justify-center mt-12">
         <div class=" text-white pt-12">
-            <h1 class="wrapper mt-6 font-bold">L'animation est un monde <span></span></h1>
+            <h1 class="wrapper mt-6 font-bold">L'animation est un monde <span class="animated-text"></span></h1>
             <h2 class="wrapper font-bold">Visible et imaginaire cela peut être qu'une simple illusion.</h2>
         </div>
         <div class="flex flex-col ml-12 justify-center items-center">
-        <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je m'efforce de créer des univers qui éveillent la curiosité. </p>
+        <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je cherche à créer des univers qui éveillent la curiosité. </p>
         <p class="text-gray-400">Ce portfolio illustre mon voyage créatif, mêlant ma personne, ma passion pour l'animation et mon goût pour les technologies immersives.</p>
         <p class="text-gray-400">Bienenue dans mon monde..."</p> 
     </div>
@@ -74,7 +74,6 @@
 import gsap from "gsap";
 import anime from "animejs";
 import TextPlugin from "gsap/TextPlugin";
-// import { onMounted } from "vue";
 import SplitType from "split-type";
 
 
@@ -93,8 +92,8 @@ onMounted(() => {
     // Text animation
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
-    const title = gsap.timeline({ repeat: 1111, repeatDelay: 1, yoyo: true });
-    title.to("h1 span", {
+    const title = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+    title.to("h1 .animated-text", {
         duration: 4,
         text: " ou chaque détails et couleurs comptent!",
     });
@@ -126,7 +125,7 @@ onMounted(() => {
 &
 .title{
     padding-top: 7rem;
-    z-index: 1000;
+    z-index: 10;
  
 }
 

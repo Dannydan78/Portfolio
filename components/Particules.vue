@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const canvas = ref(null);
-const count = 10000;
+const count = 40000;
 const positions = new Float32Array(count * 3);
 const colors = new Float32Array(count * 3);
 const velocities = new Float32Array(count * 3);
@@ -87,7 +87,7 @@ function init() {
   particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.05,
+    size: 0.03,
     sizeAttenuation: true,
     vertexColors: true,
     transparent: true,
