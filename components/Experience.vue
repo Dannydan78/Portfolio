@@ -4,7 +4,7 @@
       <div class="card flex flex-col w-full lg:w-1/2 border border-gray-500 rounded-md">
         <h2 class="ml-5 text-white font-bold">EXPERIENCE</h2>
         <div class="line h-px ml-10 mr-10"></div>
-        <div class="ml-8 text-gray-400 mt-4 m-2">Licence professionnelle : Concepteur développeur d'application (Bac +3)
+        <div class="ml-8 text-gray-400 mt-4 m-2">Formation : Licence professionnelle de Concepteur développeur d'application (Bac +3)
         </div>
         <div class="m-4 text-white mt-8 rounded-md scroll-container">
           <div class="scroll-content flex flex-col">
