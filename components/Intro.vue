@@ -76,7 +76,7 @@
         <div class="flex flex-col ml-12 justify-center items-center">
         <p class="text-gray-400">"Fasciné par le pouvoir de raconter des histoires à travers le mouvement et la profondeur, je cherche à créer des univers qui éveillent la curiosité. </p>
         <p class="text-gray-400">Ce portfolio illustre mon voyage créatif, mêlant ma personne, ma passion pour l'animation et mon goût pour les technologies immersives.</p>
-        <p class="text-gray-400">Bienenue dans mon monde..."</p> 
+        <p class="text-gray-400">Bienvenue dans mon monde..."</p> 
     </div>
     </div>
 </template>
