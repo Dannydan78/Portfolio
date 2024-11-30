@@ -58,21 +58,16 @@ const { identity } = props;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
-
-
 
 .social-link {
   color: #fff;
   font-size: 1.5rem;
   transition: all 0.3s ease;
   margin-right: 2rem;
-}
-
-.social-link:hover {
-
 }
 
 .copyright {
@@ -115,42 +110,16 @@ const { identity } = props;
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .social-links {
-    order: 2;
-  }
-
-  .copyright {
-    order: 1;
-  }
-
-  .quick-links {
-    order: 3;
-  }
+.social-links {
+  order: 1;
 }
 
-@media (max-width: 767px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .quick-links {
-    order: 2;
-  }
-
-  .social-links {
-    order: 1;
-  }
-
-  .copyright {
-    order: 3;
-  }
+.quick-links {
+  order: 2;
 }
+
+.copyright {
+  order: 3;
+}
+
 </style>

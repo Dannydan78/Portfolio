@@ -259,19 +259,12 @@ h2 {
     margin-right: 2rem;
   }
 
-  .scroll-container {
-    max-height: 180px;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .main {
     margin-left: 1rem;
     margin-right: 1rem;
-  }
-
-  .scroll-container {
-    max-height: 160px;
   }
 
   h2 {
