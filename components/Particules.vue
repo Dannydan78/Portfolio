@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const canvas = ref(null);
-const count = 40000;
+const count = 20000;
 const positions = new Float32Array(count * 3);
 const colors = new Float32Array(count * 3);
 const velocities = new Float32Array(count * 3);
@@ -87,7 +87,7 @@ function init() {
   particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.03,
+    size: 0.02,
     sizeAttenuation: true,
     vertexColors: true,
     transparent: true,
@@ -99,7 +99,7 @@ function init() {
   scene.add(particles);
 
   // Camera adaptée à la hauteur
-  const fov = 45;
+  const fov = 85;
   camera = new THREE.PerspectiveCamera(fov, sizes.width / sizes.height, 0.1, 2000);
   camera.position.z = 50; // Reculé davantage pour voir toute la scène
   camera.lookAt(0, 0, 0);
@@ -112,7 +112,7 @@ function init() {
   controls.enabled = false; // Désactiver les contrôles pour un fond fixe
 
   // Renderer avec la hauteur totale
-  renderer = new THREE.WebGLRenderer({ 
+  renderer = new THREE.WebGLRenderer({
     canvas: canvas.value,
     alpha: false // Désactiver la transparence
   });
