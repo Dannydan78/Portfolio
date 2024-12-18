@@ -58,11 +58,28 @@ function init() {
     return;
   }
 
+  function isFirefox() {
+    return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+  }
+  
+  // Définir un nombre de particules et une taille en fonction du navigateur
+  const baseCount = 20000; // Nombre de particules par défaut
+  const particleSize = isFirefox() ? 0.01 : 0.02; // Taille des particules plus petite pour Firefox
+
+  const count = isFirefox() ? Math.floor(baseCount * 10) : baseCount; // Augmenter le nombre de particules pour Firefox
+
   scene = new THREE.Scene();
 
   // Distribution des particules sur toute la hauteur
   const aspectRatio = sizes.width / sizes.height;
   const distributionHeight = 40 * (sizes.height / sizes.width); // Ajuster la distribution en fonction du ratio
+
+  // Modif le FOV pour Firefox
+  const fov = isFirefox() ? 130 : 85; 
+
+  camera = new THREE.PerspectiveCamera(fov, sizes.width / sizes.height, 0.1, 2000);
+  camera.position.z = 50; // Reculé davantage pour voir toute la scène
+  camera.lookAt(0, 0, 0);
 
   for (let i = 0; i < count; i++) {
     const i3 = i * 3;
@@ -87,7 +104,7 @@ function init() {
   particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.02,
+    size: particleSize, // Utiliser la taille définie ci-dessus
     sizeAttenuation: true,
     vertexColors: true,
     transparent: true,
@@ -97,14 +114,6 @@ function init() {
 
   particles = new THREE.Points(particlesGeometry, particlesMaterial);
   scene.add(particles);
-
-  // Camera adaptée à la hauteur
-  const fov = 85;
-  camera = new THREE.PerspectiveCamera(fov, sizes.width / sizes.height, 0.1, 2000);
-  camera.position.z = 50; // Reculé davantage pour voir toute la scène
-  camera.lookAt(0, 0, 0);
-
-  scene.add(camera);
 
   // Controls
   controls = new OrbitControls(camera, canvas.value);
