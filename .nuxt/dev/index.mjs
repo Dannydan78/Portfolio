@@ -180,7 +180,7 @@ const _asVf7N355d = (function(nitro) {
 
 const rootDir = "/Users/dannydarragon/Documents/Projets/Portfolio";
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"}],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/png","href":"/portfolio.png"}],"style":[],"script":[],"noscript":[]};
 
 const appRootTag = "div";
 
