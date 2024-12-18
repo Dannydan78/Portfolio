@@ -29,7 +29,7 @@ onMounted(() => {
   );
   
   sizes.width = window.innerWidth;
-  sizes.height = documentHeight; // Utiliser la hauteur totale du document
+  sizes.height = documentHeight; // Utilise la hauteur totale du document
   init();
 
   // Observer les changements de taille du contenu
