@@ -67,7 +67,7 @@ article {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     color: azure;
-    width: 100%;
+    width: 93%;
 }
 
 article a::after {

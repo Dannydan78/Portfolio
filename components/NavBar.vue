@@ -126,7 +126,9 @@ nav {
     justify-content: center;
 }
 
-.social-link:hover {}
+.social-link:hover {
+  color: #19f6e8;
+}
 
 .social-icons-container {
     @media (min-width: 768px) {

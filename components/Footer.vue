@@ -44,7 +44,7 @@ const { identity } = props;
 </script>
 <style scoped>
 .footer {
-    background: rgba(79, 80, 80, 0.3);
+  background: rgba(79, 80, 80, 0.3);
   color: #fff;
   padding: 2rem 0;
   margin-top: auto;
@@ -66,8 +66,12 @@ const { identity } = props;
 .social-link {
   color: #fff;
   font-size: 1.5rem;
-  transition: all 0.3s ease;
   margin-right: 2rem;
+}
+
+.social-link:hover {
+  color: rgba(138, 43, 226, 1);
+  transition: all 0.5s ease;
 }
 
 .copyright {
@@ -90,7 +94,6 @@ const { identity } = props;
 }
 
 .quick-links a::after {
-
   position: absolute;
   width: 0;
   height: 2px;
@@ -102,8 +105,7 @@ const { identity } = props;
 
 .quick-links a:hover {
     color: rgba(138, 43, 226, 1);
-    transition: all 0.5s ease-out;
-
+    transition: all 0.3s ease-out;
 }
 
 .quick-links a:hover::after {
